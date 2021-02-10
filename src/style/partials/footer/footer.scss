@@ -1,0 +1,166 @@
+.footer {
+  background: #0d1321;
+  padding: 56px 0 18px;
+
+  &-top_row {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #4c4e5e;
+  }
+
+  &-col {
+    &:first-child {
+      min-width: 173px;
+    }
+
+    &:nth-child(3) {
+      margin-top: 31px;
+    }
+
+    &:last-child {
+      width: 498px;
+    }
+
+    min-width: 150px;
+    list-style: none;
+
+    & + & {
+      padding-left: 20px;
+    }
+
+    &-item {
+      & + & {
+        margin-top: 10px;
+      }
+    }
+
+    &-heading {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 150%;
+      text-transform: uppercase;
+      color: #ffffff;
+    }
+
+    &-link {
+      display: block;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 130%;
+      color: #979eb0;
+      text-decoration: none;
+
+      &:hover {
+        color: #fff;
+      }
+    }
+
+    &-desc {
+      display: block;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 150%;
+      color: #9d9db4;
+    }
+  }
+
+  &-adress {
+    display: block;
+    margin-bottom: 24px;
+    max-width: 330px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 130%;
+    color: #979eb0;
+  }
+
+  &-phone {
+    display: block;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 150%;
+    color: #ffffff;
+  }
+
+  &-mail {
+    display: block;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 150%;
+    text-decoration-line: underline;
+    color: #6981ff;
+  }
+
+  &-apps {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 30px 20px 30px 0;
+
+    &-link {
+      display: block;
+      margin-right: 32px;
+      text-decoration: none;
+    }
+
+    p {
+      display: block;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 135%;
+      color: #ffffff;
+    }
+  }
+
+  &-bottom_row {
+    padding-top: 16px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  &-disclamer {
+    display: block;
+    margin-right: 56px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 150%;
+    color: #9d9db4;
+  }
+
+  &-polic {
+    display: block;
+    margin-right: 24px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 135%;
+    text-decoration-line: underline;
+    color: #ffffff;
+  }
+
+  &-facebook {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-decoration: none;
+    margin-left: auto;
+
+    span {
+      display: block;
+      margin-right: 16px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 150%;
+      color: #9d9db4;
+    }
+
+    img {
+      display: block;
+      width: 33px;
+    }
+  }
+}

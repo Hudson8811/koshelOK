@@ -1,0 +1,170 @@
+.header {
+  height: 72px;
+  padding: 16px 0;
+  background: radial-gradient(
+      83.44% 320.27% at 0% 100%,
+      #0055b8 0%,
+      #2065e6 0.01%,
+      rgba(0, 85, 184, 0) 100%
+    ),
+    #0055b8;
+  border-bottom: 1px solid #3c7cf3;
+
+  &-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  &-logo {
+    display: block;
+    width: 146px;
+    margin-right: 40px;
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  &-btn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 23px;
+    height: 18px;
+    margin-top: 4px;
+    margin-right: auto;
+
+    span {
+      display: block;
+      height: 2px;
+      width: 23px;
+      background: #ffffff;
+      border-radius: 3px;
+
+      &:before,
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        display: block;
+        height: 2px;
+        width: 23px;
+        background: #ffffff;
+        border-radius: 3px;
+      }
+      &:before {
+        top: 0;
+      }
+
+      &:after {
+        bottom: 0;
+      }
+    }
+  }
+
+  &-content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-grow: 1;
+    max-width: 661px;
+  }
+
+  &-phone_btn {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 125%;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0 20px;
+
+    img {
+      display: block;
+      width: 24px;
+    }
+
+    span {
+      display: block;
+      margin-left: 10px;
+    }
+  }
+
+  &-flag_btn {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 125%;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 0 40px 0 20px;
+
+    img {
+      display: block;
+      width: 16px;
+    }
+
+    span {
+      display: block;
+      margin-left: 8px;
+    }
+  }
+
+  &-pay_btn {
+    height: 40px;
+    width: 100%;
+    max-width: 158px;
+    border: 1px solid #ffffff;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 24px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 125%;
+    text-decoration: none;
+    color: #ffffff;
+    margin-left: 24px;
+
+    span {
+      display: block;
+      white-space: nowrap;
+    }
+  }
+
+  &-user_btn {
+    height: 40px;
+    width: 100%;
+    max-width: 162px;
+    border: 1px solid #ffffff;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 16px 5px 24px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 125%;
+    text-decoration: none;
+    color: #ffffff;
+
+    img {
+      display: block;
+      width: 22px;
+    }
+
+    span {
+      display: block;
+      padding-right: 15px;
+      white-space: nowrap;
+    }
+  }
+}

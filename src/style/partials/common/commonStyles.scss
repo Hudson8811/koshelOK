@@ -1,0 +1,80 @@
+body {
+  font-family: 'SF Pro Display';
+  color: #050517;
+  background-color: #fff;
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+  justify-content: stretch;
+  align-items: stretch;
+  flex-direction: column;
+  min-height: 100vh;
+  height: auto;
+
+  main {
+    flex-grow: 1;
+  }
+}
+
+.container {
+  width: calc(100% - 30px);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+section {
+  padding: 40px 0;
+}
+
+.section-title {
+  display: block;
+  margin-bottom: 64px;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 125%;
+  text-align: center;
+  color: #050517;
+}
+
+.gray-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #2065e6;
+  border: 1px solid #e1e3f0;
+  border-radius: 40px;
+  height: 48px;
+  padding: 5px 10px;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  color: #2065e6;
+
+  span {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.blue-btn {
+  display: flex;
+  min-height: 48px;
+  padding: 5px 10px;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: #2065e6;
+  border-radius: 40px;
+  width: 100%;
+  max-width: 345px;
+  text-decoration: none;
+}
