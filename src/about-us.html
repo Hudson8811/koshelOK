@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8" />
-    <title>Главная</title>
+    <title>О нас</title>
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -11,22 +11,39 @@
   </head>
 
   <body>
-    <div class="wrapper index-page">
+    <div class="wrapper">
       //= common/header
 
       <main class="main">
-        <section class="f_banner">
-          <div class="container f_banner-container">
-            <div class="f_banner-content">
-              <img src="images/vau.png" alt="">
-              <h2 class="f_banner-desc">Первый кредит под 0,01%</h2>
+        <section class="breadcrumbs">
+          <div class="container">
+            <ul>
+              <li><a href="#">Главная</a></li>
+              <li><a href="#">Как взять кредит</a></li>
+            </ul>
+          </div>
+        </section>
+        <section class="about about--us">
+          <div class="about-wrapper">
+            <div class="container about-container">
+              <div class="about-text">
+                <h2 class="section-title">О компании</h2>
+                <h3>KoshelOK – ваш личный финансовый помощник! <br> Если с кешем вдруг не ОК, обращайся в КошельОК</h3>
+                <p>Каждый день с нашей помощью люди решают срочные финансовые проблемы, оформляя выгодные микрозаймы без сбора документов, стояния в очередях и бесконечного дозвона до автоответчика в банках. У нас есть конкретная цель – изменить рынок потребительского кредитования в Украине, сделав его предельно прозрачным, простым и удобным для клиентов. Мы понимаем, что именно тогда, когда вам в срочном порядке нужны деньги, у вас нет времени ни на поездку в банк, ни на мучительный процесс сбора документов.</p>
+                <a href="#" class="blue-btn"><span>получить деньги</span></a>
+              </div>
+              <div class="about-video">
+                <img src="images/video-bg.png" alt="" class="about-video-bg">
+                <a class="about-video-play" href="https://www.youtube.com/embed/tEPB7uzKuh4" data-fancybox="">
+                  <img src="img/play.svg" alt="">
+                </a>
+              </div>
             </div>
           </div>
         </section>
-        <section class="why">
+        <section class="why why--gray">
           <div class="container">
             <h2 class="section-title">Почему мы</h2>
-
             <div class="why-catalog">
               <div class="why-item">
                 <div class="why-icon">
@@ -76,86 +93,24 @@
             </div>
           </div>
         </section>
-        
-        <section class="loyal">
+
+        <section class="maps">
           <div class="container">
-            <h2 class="section-title">Программа лояльности</h2>
-            <div class="loyal-content-wrapper">
-              <div class="loyal-grafic">
-                <img src="images/grafic.png" alt="">
+            <h2 class="section-title">Контакты и реквизиты</h2>
+            <div class="maps-wrapper">
+              <div class="maps-map">
+                <div id="map"></div>
               </div>
-              <div class="loyal-content">
-                <h3>Все клиенты KoshelOK участвуют  в <br> программе «Уровни лояльности»</h3>
-                <p>Для постоянных клиентов компании, которые берут  в KoshelOK кредиты онлайн на карту, действует программа «Уровни лояльности». Благодаря ей пользователь сервиса постепенно увеличивает свою индивидуальную скидку на базовую процентную ставку. Скидка от «Уровней лояльности» прибавляется к скидкам, которые действуют в сервисе во время акций, увеличивая выгоду пользователя.</p>
-                <a href="#" class="gray-btn"><span>Подробнеe о программе</span></a>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="take">
-          <div class="container">
-            <h2 class="section-title">Как взять кредит</h2>
-            <p class="take-desc">Телефон, паспорт, банковская карта и 10 минут времени - взять кредит у нас проще простого</p>
-            <div class="take-catalog">
-              <div class="take-item">
-                <div class="take-img">
-                  <b>1</b>
-                  <img src="img/take/img1.svg" alt="">
-                </div>
-                <span>Укажите сумму и срок</span>
-                <p>Введите сумму и срок кредита в калькуляторе на главнй странице</p>
-              </div>
-              <div class="take-item">
-                <div class="take-img">
-                  <b>2</b>
-                  <img src="img/take/img2.svg" alt="">
-                </div>
-                <span>Заполните заявку</span>
-                <p>Введите сумму и срок кредита в калькуляторе на главнй странице</p>
-              </div>
-              <div class="take-item">
-                <div class="take-img">
-                  <b>3</b>
-                  <img src="img/take/img3.svg" alt="">
-                </div>
-                <span>Получите деньги</span>
-                <p>Введите сумму и срок кредита в калькуляторе на главнй странице</p>
-              </div>
-            </div>
-            <a href="#" class="blue-btn"><span>оформить кредит</span></a>
-          </div>
-        </section>
-
-        <section class="repay">
-          <div class="container">
-            <h2 class="section-title">Как погасить кредит</h2>
-            <div class="repay-catalog">
-              <div class="repay-item">
-                <div class="repay-img">
-                  <img src="img/repay/icon1.svg" alt="">
-                </div>
-                <span>Через платежные терминалы</span>
-                <p>Оплата кредита в терминале Ibox, EasyPay и City24 - это быстро и удобно. Терминал Вы сможете найти в ближайшем к Вам супермаркете.</p>
-                <a href="#">Подробнее</a>
-              </div>
-
-              <div class="repay-item">
-                <div class="repay-img">
-                  <img src="img/repay/icon2.svg" alt="">
-                </div>
-                <span>Через «Личный кабинет» на сайте</span>
-                <p>Оплата кредита в терминале Ibox, EasyPay и City24 - это быстро и удобно. Терминал Вы сможете найти в ближайшем к Вам супермаркете.</p>
-                <a href="#">Подробнее</a>
-              </div>
-
-              <div class="repay-item">
-                <div class="repay-img">
-                  <img src="img/repay/icon3.svg" alt="">
-                </div>
-                <span>Банковским переводом</span>
-                <p>Оплата кредита в терминале Ibox, EasyPay и City24 - это быстро и удобно. Терминал Вы сможете найти в ближайшем к Вам супермаркете.</p>
-                <a href="#">Подробнее</a>
+              <div class="maps-info">
+                <p class="maps-info-title">мы находимся по адресу</p>
+                <p class="maps-info-adress">08135, Киевская обл., Киево-Святошинский р-н, <br> с. Чайки, ул. Антонова, 8А</p>
+                <p class="maps-info-title">служба поддержки</p>
+                <a href="+380443344420" class="maps-info-phone">+38 (044) 334 44 20</a>
+                <a href="mailto:info@koshelok.net" class="maps-info-mail">info@koshelok.net</a>
+                <p class="maps-info-title">График работы</p>
+                <p class="maps-info-text">Офис: пн-пт с 9:00 до 19:00</p>
+                <p class="maps-info-text">Служба поддердки: Круглосуточно, 24/7</p>
+                <p class="maps-info-text">Обработка заявок: Круглосуточно, 24/7</p>
               </div>
             </div>
           </div>
@@ -471,85 +426,6 @@
           </div>
         </section>
 
-        <section class="faq">
-          <div class="container">
-            <h2 class="section-title">Часто задаваемые вопросы</h2>
-            <div class="faq-wrapper">
-              <div class="faq-item">
-                <div class="faq-heading">
-                  <p>Кто может получить кредит в PanCredit?</p>
-                  <b></b>
-                </div>
-                <div class="faq-content">
-                  <p>Нужен только паспорт и индивидуальный налоговый номер (ИНН), мы не требуем фотографий с паспортом или загрузку сканкопий документов.</p>
-                </div>
-              </div>
-
-              <div class="faq-item">
-                <div class="faq-heading">
-                  <p>Какие документы нужны для оформления онлайн кредита?</p>
-                  <b></b>
-                </div>
-                <div class="faq-content">
-                  <p>Нужен только паспорт и индивидуальный налоговый номер (ИНН), мы не требуем фотографий с паспортом или загрузку сканкопий документов.</p>
-                </div>
-              </div>
-
-              <div class="faq-item">
-                <div class="faq-heading">
-                  <p>Сколько времени будет рассматриваться моя заявка?</p>
-                  <b></b>
-                </div>
-                <div class="faq-content">
-                  <p>Нужен только паспорт и индивидуальный налоговый номер (ИНН), мы не требуем фотографий с паспортом или загрузку сканкопий документов.</p>
-                </div>
-              </div>
-
-              <div class="faq-item">
-                <div class="faq-heading">
-                  <p>Что делать, если не успеваю погасить кредит?</p>
-                  <b></b>
-                </div>
-                <div class="faq-content">
-                  <p>Нужен только паспорт и индивидуальный налоговый номер (ИНН), мы не требуем фотографий с паспортом или загрузку сканкопий документов.</p>
-                </div>
-              </div>
-
-              <div class="faq-item">
-                <div class="faq-heading">
-                  <p>Начисляются ли штрафы и пени в период действия карантина?</p>
-                  <b></b>
-                </div>
-                <div class="faq-content">
-                  <p>Нужен только паспорт и индивидуальный налоговый номер (ИНН), мы не требуем фотографий с паспортом или загрузку сканкопий документов.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="about">
-          <div class="container">
-            <h2 class="section-title">О компании</h2>
-          </div>
-          <div class="about-wrapper">
-            <div class="container about-container">
-              <div class="about-text">
-                <h3>Не соглашайся с временным безденежьем</h3>
-                <p>Как часто вы сожалели о том, что на определённую вещь, подарок, развлечение, лекарства не хватает финансовых средств? Требовалось совсем немного, порядка 1000-5000 гривен, а занять было не у кого: друзья отказывали, нуждаясь сами, банк требовал пакет документов и предлагал длительный срок рассмотрения заявки. Смешная сумма – и тем не менее получить её было очень сложно… Знакомьтесь, компания KoshelOK. Мы предоставляем частные займы в сумме до 10 000 гривен, с учётом оперативного решения вопроса. </p>
-                <h3>Кредит-онлайн на карту Украина</h3>
-                <p>Работаем по всей Украине и не требуем присутствия клиентов в момент рассмотрения заявки. От вас понадобится 2 действия: заполнить заявку и приложить к электронному письму сканированные копии паспорта, идентификационного кода</p>
-              </div>
-              <div class="about-video">
-                <img src="images/video-bg.png" alt="" class="about-video-bg">
-                <a class="about-video-play" href="https://www.youtube.com/embed/tEPB7uzKuh4" data-fancybox="">
-                  <img src="img/play.svg" alt="">
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-
         <section class="partners">
           <div class="container">
             <div class="partners-catalog">
@@ -575,7 +451,7 @@
 
       //= common/footer
     </div>
-
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=c3b0db88-afa3-49b1-b1e6-f545d8be8b91" type="text/javascript"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

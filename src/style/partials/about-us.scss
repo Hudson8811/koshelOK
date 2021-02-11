@@ -1,0 +1,165 @@
+.why--gray {
+  padding: 64px 0;
+  margin-top: 40px;
+  background: #f5f6fb;
+}
+
+.breadcrumbs {
+  padding: 24px 0 0;
+
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    li {
+      margin-right: 10px;
+
+      a {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 150%;
+        color: #2065e6;
+        text-decoration: none;
+
+        &:before {
+          content: '';
+          display: block;
+          width: 7px;
+          height: 10px;
+          margin-right: 10px;
+          background: center / auto url(../img/bk-arrow.svg) no-repeat;
+        }
+      }
+
+      &:first-child {
+        a:before {
+          display: none;
+        }
+      }
+
+      &:last-child {
+        a {
+          color: #6e737d;
+          pointer-events: none;
+        }
+      }
+    }
+  }
+}
+
+.about--us {
+  .about-wrapper {
+    padding: 0;
+    background: transparent;
+  }
+
+  .section-title {
+    text-align: left;
+    margin-bottom: 20px;
+  }
+
+  .about-text {
+    padding: 0;
+
+    h3 {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      max-width: 540px;
+      font-size: 16px;
+    }
+
+    .blue-btn {
+      margin-top: 40px;
+      max-width: 224px;
+    }
+  }
+}
+
+.maps {
+  .section-title {
+    text-align: left;
+  }
+
+  &-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+  }
+
+  &-map {
+    position: relative;
+    width: calc(50% - 24px);
+    min-height: 438px;
+    margin-right: 48px;
+    border-radius: 15px;
+    overflow: hidden;
+
+    #map {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &-info {
+    width: calc(50% - 24px);
+    padding: 40px;
+    background: #f5f6fb;
+    border-radius: 15px;
+    p,
+    a {
+      display: block;
+    }
+
+    &-title {
+      margin-bottom: 10px;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 150%;
+      text-transform: uppercase;
+      color: #0d1321;
+    }
+
+    &-adress {
+      margin-bottom: 30px;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 135%;
+      color: #0d1321;
+    }
+
+    &-phone {
+      margin-bottom: 5px;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 135%;
+      color: #0d1321;
+      text-decoration: none;
+    }
+
+    &-mail {
+      margin-bottom: 20px;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 135%;
+      text-decoration-line: underline;
+      color: #2065e6;
+    }
+
+    &-text {
+      margin-bottom: 5px;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 135%;
+      color: #0d1321;
+    }
+  }
+}

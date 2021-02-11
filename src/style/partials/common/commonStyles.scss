@@ -78,3 +78,27 @@ section {
   max-width: 345px;
   text-decoration: none;
 }
+
+* {
+  outline: none;
+}
+
+.paper {
+  .section-title {
+    text-align: left;
+    margin-bottom: 30px;
+  }
+
+  p {
+    display: block;
+    max-width: 1138px;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 150%;
+    color: #0d1321;
+
+    & + p {
+      margin-top: 20px;
+    }
+  }
+}
