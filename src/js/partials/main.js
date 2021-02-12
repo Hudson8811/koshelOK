@@ -45,13 +45,32 @@ $(document).ready(function(){
 		}
 	});
 
+    $("#slider-range").slider({
+        range: "min",
+        min: 1000,
+        max: 15000,
+        value: 4000,
+        slide: function( event, ui ) {
+          $( "#amount" ).val( ui.value + " грн");
+        }
+      });
+      $( "#amount" ).val( $( "#slider-range" ).slider( "value" ) + " грн");
+
+    $("#slider-range2").slider({
+        range: "min",
+        min: 1,
+        max: 30,
+        value: 1,
+        slide: function( event, ui ) {
+          $( "#amount2" ).val( ui.value + " дней");
+        }
+      });
+      $( "#amount2" ).val( $( "#slider-range2" ).slider( "value" ) + " дней");
+
     ymaps.ready(function () {
         var myMap = new ymaps.Map('map', {
                 center: [50.439904, 30.309463],
                 zoom: 12,
-                // Также доступны наборы 'default' и 'largeMapDefaultSet'
-                // Элементы управления в наборах подобраны оптимальным образом
-                // для карт маленького, среднего и крупного размеров.
                 controls: []
             }, {
                 suppressMapOpenBlock: true

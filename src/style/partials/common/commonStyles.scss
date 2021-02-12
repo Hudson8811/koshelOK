@@ -110,3 +110,139 @@ section {
   font-style: inherit;
   line-height: inherit;
 }
+
+.slide_bar {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 10;
+  padding: 40px 32px;
+  background: #f5f6fb;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 15px;
+  width: 529px;
+
+  &-btns {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    a {
+      width: calc(50% - 8px);
+
+      & + a {
+        margin-left: 16px;
+      }
+    }
+  }
+
+  &-content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    padding: 16px 24px;
+    margin: 32px 0;
+    background: #ffffff;
+    box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.08);
+
+    &-row {
+      width: fit-content;
+      margin-right: auto;
+
+      & + & {
+        margin-left: auto;
+      }
+
+      p {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 191%;
+        color: #6e737d;
+
+        b {
+          display: block;
+          width: 97px;
+          padding-left: 20px;
+          margin-left: auto;
+          font-weight: 600;
+          font-size: 14px;
+          color: #0d1321;
+        }
+      }
+    }
+  }
+
+  &-flexing {
+    & + & {
+      margin-top: 24px;
+    }
+
+    &-label {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      label {
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 135%;
+        color: #6e737d;
+      }
+
+      input {
+        max-width: 100px;
+        background: transparent;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 135%;
+        text-align: right;
+        color: #0d1321;
+      }
+    }
+
+    .ui-slider {
+      position: relative;
+      height: 21px;
+      width: 100%;
+      background: #e9ebf3;
+      border-radius: 27px;
+      margin-top: 20px;
+      overflow: hidden;
+
+      img {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        z-index: 2;
+        display: block;
+        transform: translate(-50%, -50%);
+      }
+
+      .ui-slider-handle {
+        z-index: 3;
+        top: 0;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 36px;
+        height: 21px;
+        background: #c2e812;
+        border-radius: 27px;
+        margin-left: -18px;
+      }
+
+      .ui-slider-range {
+        position: absolute;
+        z-index: 4;
+        top: 0;
+        height: 21px;
+        background: 7px center / 451px url(../img/flexing-svg.svg) no-repeat;
+        border-radius: 27px;
+      }
+    }
+  }
+}

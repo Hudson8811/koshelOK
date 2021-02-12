@@ -21,6 +21,14 @@
     #0055b8;
   margin-bottom: 40px;
 
+  &-small {
+    padding: 40px 0 0;
+  }
+
+  &-container {
+    position: relative;
+  }
+
   &-content {
     display: flex;
     justify-content: center;
