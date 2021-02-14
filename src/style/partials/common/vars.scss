@@ -54,6 +54,12 @@
   font-style: normal;
 }
 
+@mixin tMax {
+  @media (max-width: 1000px) {
+    @content;
+  }
+}
+
 @mixin mMax {
   @media (max-width: 768px) {
     @content;

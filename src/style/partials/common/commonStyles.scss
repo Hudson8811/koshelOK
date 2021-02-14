@@ -12,6 +12,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
   height: auto;
+  overflow: hidden;
 
   main {
     flex-grow: 1;
@@ -26,6 +27,10 @@ body {
 
 section {
   padding: 40px 0;
+
+  @include mMax {
+    padding: 20px 0;
+  }
 }
 
 .section-title {
@@ -36,6 +41,12 @@ section {
   line-height: 125%;
   text-align: center;
   color: #050517;
+
+  @include mMax {
+    font-size: 18px;
+    line-height: 125%;
+    margin-bottom: 32px;
+  }
 }
 
 .gray-btn {
@@ -51,6 +62,7 @@ section {
   font-size: 14px;
   line-height: 17px;
   color: #2065e6;
+  text-decoration: none;
 
   span {
     display: block;
@@ -242,6 +254,77 @@ section {
         height: 21px;
         background: 7px center / 451px url(../img/flexing-svg.svg) no-repeat;
         border-radius: 27px;
+      }
+    }
+  }
+}
+
+.long-slide_bar {
+  padding: 32px 20px 40px;
+  border-radius: 20px;
+  background: #f5f6fb;
+  box-shadow: 0px 0px 17px rgba(0, 0, 0, 0.19);
+
+  &-title {
+    display: block;
+    margin-bottom: 32px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 125%;
+    color: #0d1321;
+  }
+
+  .slide_bar-flexing .ui-slider .ui-slider-range {
+    background: 6px center/332px url(../img/svg-bg-active.svg) no-repeat;
+  }
+
+  .slide_bar-btns {
+    display: block;
+
+    a {
+      width: 100%;
+
+      & + a {
+        margin-top: 16px;
+        margin-left: 0;
+      }
+    }
+  }
+  .slide_bar-content {
+    padding: 32px;
+    position: relative;
+    margin: 46px 0 38px;
+
+    .clip-bg {
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      top: -6px;
+      width: 345px;
+      height: calc(100% + 12px);
+    }
+  }
+  .slide_bar-content-row {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+
+    h2 {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 135%;
+      color: #0d1321;
+    }
+
+    p {
+      min-height: 34px;
+      border-bottom: 1px solid #eef0f9;
+
+      &:last-child {
+        margin-top: 20px;
+        border-bottom: 0;
       }
     }
   }

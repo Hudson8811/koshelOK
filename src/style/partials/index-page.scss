@@ -10,7 +10,6 @@
 }
 
 .f_banner {
-  overflow: hidden;
   padding: 107px 0 0;
   background: radial-gradient(
       83.44% 320.27% at 0% 100%,
@@ -37,6 +36,11 @@
     min-height: 532px;
     width: 454px;
 
+    @include mMax {
+      min-height: 221px;
+      width: 100%;
+    }
+
     img {
       position: absolute;
       z-index: 1;
@@ -45,6 +49,15 @@
       display: block;
       width: 770px;
       transform: translateY(-50%);
+
+      @include mMax {
+        width: 319px;
+        left: -6px;
+      }
+    }
+
+    @include tMax {
+      width: 100%;
     }
   }
 
@@ -64,6 +77,43 @@
     line-height: 135%;
     color: #0d1321;
     border-left: 10px solid #ff6e5a;
+
+    @include tMax {
+      width: 100%;
+    }
+
+    @include mMax {
+      position: absolute;
+      right: 0;
+      width: 144px;
+      background: transparent;
+      border: none;
+      padding: 0;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 135%;
+      color: #ffffff;
+    }
+  }
+
+  @include tMax {
+    padding-top: 61px;
+    margin-bottom: 500px;
+
+    .slide_bar {
+      top: calc(100% + 20px);
+      right: 50%;
+      transform: translateX(50%);
+    }
+  }
+
+  @include mMax {
+    margin-bottom: 36px;
+    border-radius: 0 0 20px 20px;
+
+    .slide_bar {
+      display: none;
+    }
   }
 }
 
@@ -74,6 +124,11 @@
     align-items: stretch;
     flex-wrap: wrap;
     margin-bottom: -56px;
+
+    @include mMax {
+      display: block;
+      margin-bottom: -24px;
+    }
   }
 
   &-item {
@@ -83,9 +138,15 @@
     width: calc(33.333% - 138px / 3);
     margin-bottom: 56px;
     margin-right: 69px;
+    min-width: 271px;
 
     &:nth-child(3n) {
       margin-right: 0;
+    }
+
+    @include mMax {
+      width: 100%;
+      margin-bottom: 24px;
     }
   }
 
@@ -95,6 +156,15 @@
     align-items: center;
     width: 64px;
     flex-shrink: 0;
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    @include mMax {
+      width: 50px;
+    }
   }
 
   &-text {
@@ -117,6 +187,18 @@
       line-height: 21px;
       color: #6e737d;
     }
+
+    @include mMax {
+      padding-left: 17px;
+
+      span {
+        font-size: 14px;
+        margin-bottom: 5px;
+      }
+      p {
+        font-size: 14px;
+      }
+    }
   }
 }
 
@@ -125,6 +207,10 @@
     display: flex;
     justify-content: flex-start;
     align-items: stretch;
+
+    @include tMax {
+      display: block;
+    }
   }
 
   &-grafic {
@@ -135,6 +221,11 @@
     img {
       display: block;
       width: 100%;
+    }
+
+    @include tMax {
+      max-height: 100%;
+      margin: 0 auto;
     }
   }
 
@@ -167,6 +258,10 @@
       margin-top: auto;
       max-width: 224px;
     }
+
+    @include tMax {
+      display: none;
+    }
   }
 }
 
@@ -177,6 +272,10 @@
 
   .section-title {
     margin-bottom: 20px;
+
+    @include mMax {
+      margin-bottom: 10px;
+    }
   }
   &-desc {
     display: block;
@@ -186,18 +285,50 @@
     line-height: 150%;
     text-align: center;
     color: #0d1321;
+
+    @include mMax {
+      font-size: 14px;
+      line-height: 135%;
+      margin-bottom: 32px;
+    }
   }
   &-catalog {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: stretch;
     margin-bottom: 56px;
+    flex-wrap: wrap;
+
+    @include mMax {
+      display: block;
+      margin-bottom: 34px;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 15px;
+        display: block;
+        width: 2px;
+        height: 600px;
+        background: #e9ebf5;
+      }
+    }
   }
 
   &-item {
+    position: relative;
     width: 33%;
     max-width: 299px;
     margin: auto;
+    min-width: 293px;
+    margin-bottom: 40px;
+
+    @include mMax {
+      width: 100%;
+      max-width: none;
+    }
 
     span {
       display: block;
@@ -207,6 +338,12 @@
       line-height: 150%;
       text-align: center;
       color: #0d1321;
+
+      @include mMax {
+        font-size: 14px;
+        line-height: 150%;
+        margin-bottom: 8px;
+      }
     }
 
     p {
@@ -216,6 +353,13 @@
       line-height: 20px;
       text-align: center;
       color: #6e737d;
+
+      @include mMax {
+        max-width: 213px;
+        margin: 0 auto;
+        font-size: 14px;
+        line-height: 150%;
+      }
     }
   }
   &-img {
@@ -226,6 +370,12 @@
     margin: 0 auto 34px;
     border-radius: 17px;
     box-shadow: 0px 0px 17px rgba(0, 0, 0, 0.11);
+
+    @include mMax {
+      position: static;
+      max-width: 175px;
+      margin-bottom: 16px;
+    }
 
     img {
       display: block;
@@ -249,6 +399,16 @@
       font-size: 16px;
       line-height: 135%;
       color: #ffffff;
+
+      @include mMax {
+        top: 0;
+        left: 0;
+        margin: 0;
+        width: 32px;
+        height: 32px;
+        font-size: 14px;
+        line-height: 135%;
+      }
     }
   }
 }
@@ -258,6 +418,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @include mMax {
+      display: block;
+    }
   }
 
   &-item {
@@ -265,6 +429,21 @@
     max-width: 408px;
     padding: 0 47px;
     border-right: 1px solid #e1e3f0;
+
+    @include mMax {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      width: 100%;
+      padding: 0;
+      max-width: none;
+      margin-bottom: 32px;
+      border: none;
+
+      &-texts {
+        padding-left: 24px;
+      }
+    }
 
     &:nth-child(3n) {
       border-right: 0;
@@ -277,6 +456,12 @@
       font-size: 16px;
       line-height: 150%;
       color: #0d1321;
+
+      @include mMax {
+        font-size: 14px;
+        line-height: 150%;
+        margin-bottom: 5px;
+      }
     }
 
     p {
@@ -286,6 +471,11 @@
       font-size: 16px;
       line-height: 150%;
       color: #6e737d;
+
+      @include mMax {
+        font-size: 14px;
+        line-height: 150%;
+      }
     }
 
     a {
@@ -294,6 +484,11 @@
       line-height: 150%;
       text-decoration-line: underline;
       color: #2065e6;
+
+      @include mMax {
+        font-size: 14px;
+        line-height: 150%;
+      }
     }
   }
 
@@ -304,20 +499,50 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 42px;
+
+    @include mMax {
+      position: relative;
+      width: 89px;
+      height: 89px;
+      margin: 0;
+
+      img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+    }
   }
 }
 
 .reviews {
   &-slider {
     margin: 0 -12px;
+
+    @include mMax {
+      margin: 0;
+    }
+
     .slick-slide {
       padding: 0 12px;
+
+      @include mMax {
+        padding: 0;
+      }
     }
   }
   &-item {
     background: #f5f6fb;
     border-radius: 15px;
     padding: 32px;
+
+    @include mMax {
+      padding: 24px 24px 0;
+      border-radius: 15px 15px 0 0;
+    }
   }
 
   &-heading {
@@ -400,6 +625,12 @@
       font-size: 16px;
       line-height: 150%;
       color: #0d1321;
+
+      @include mMax {
+        font-size: 14px;
+        padding-bottom: 40px;
+        border-bottom: 1px solid #e9ebf5;
+      }
     }
   }
 
@@ -408,6 +639,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @include mMax {
+      margin-top: 0;
+      padding: 16px 0;
+      border-radius: 0 0 15px 15px;
+      background: #f5f6fb;
+    }
 
     &-dots {
       display: flex;
@@ -457,6 +695,10 @@
     padding: 31px 32px 24px;
     background: #f5f6fb;
     border-radius: 15px;
+
+    @include mMax {
+      padding: 24px;
+    }
   }
 
   &-item {
@@ -489,6 +731,10 @@
       line-height: 150%;
       color: #050517;
       transition: color 0.2s linear;
+
+      @include mMax {
+        font-size: 14px;
+      }
     }
 
     b {
@@ -498,6 +744,7 @@
       border-radius: 50%;
       background: #e1e3f0 46% 40% / auto url(../img/faq-arrow.svg) no-repeat;
       transition: background 0.2s linear, transform 0.2s linear;
+      flex-shrink: 0;
     }
 
     &.active {
@@ -526,6 +773,14 @@
       line-height: 150%;
       color: #050517;
     }
+
+    @include mMax {
+      padding: 16px 20px 44px 16px;
+
+      p {
+        font-size: 14px;
+      }
+    }
   }
 }
 
@@ -533,12 +788,21 @@
   &-wrapper {
     padding: 48px 0;
     background: #f5f6fb;
+
+    @include tMax {
+      padding: 0;
+      background: transparent;
+    }
   }
 
   &-container {
     display: flex;
     justify-content: flex-start;
     align-items: stretch;
+
+    @include tMax {
+      flex-direction: column;
+    }
   }
 
   &-text {
@@ -548,6 +812,14 @@
     background: #ffffff;
     border-radius: 15px;
 
+    @include tMax {
+      width: 100%;
+      order: 1;
+      padding: 0;
+      margin-right: 0;
+      margin-top: 24px;
+    }
+
     h3 {
       display: block;
       margin-bottom: 5px;
@@ -555,6 +827,10 @@
       font-size: 16px;
       line-height: 150%;
       color: #0d1321;
+
+      @include tMax {
+        font-size: 14px;
+      }
     }
 
     p {
@@ -564,6 +840,10 @@
       font-size: 14px;
       line-height: 150%;
       color: #0d1321;
+
+      @include tMax {
+        font-size: 12px;
+      }
 
       &:last-child {
         margin-bottom: 0;
@@ -579,6 +859,10 @@
     align-items: center;
     width: calc(50% - 24px);
     border-radius: 15px;
+
+    @include tMax {
+      width: 100%;
+    }
 
     &-bg {
       display: block;
@@ -597,6 +881,11 @@
       width: 80px;
       z-index: 2;
 
+      @include tMax {
+        width: 50px;
+        height: 50px;
+      }
+
       img {
         display: block;
         width: 100%;
@@ -612,6 +901,7 @@
     align-items: stretch;
     border: 1px solid #e1e3f0;
     border-radius: 15px;
+    flex-wrap: wrap;
   }
 
   &-item {
@@ -622,6 +912,19 @@
     width: 20%;
     border-right: 1px solid #e1e3f0;
 
+    @include mMax {
+      width: 50%;
+      border-bottom: 1px solid #e1e3f0;
+
+      &:nth-child(2n) {
+        border-right: 0;
+      }
+
+      &:nth-child(2n - 1) {
+        border-right: 1px solid #e1e3f0;
+      }
+    }
+
     img {
       display: block;
       max-width: 90%;
@@ -629,6 +932,11 @@
 
     &:last-child {
       border-right: 0;
+
+      @include mMax {
+        border-right: 1px solid #e1e3f0;
+        border-bottom: 0;
+      }
     }
   }
 }

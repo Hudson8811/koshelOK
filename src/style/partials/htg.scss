@@ -1,4 +1,9 @@
 .htg {
+  &-bar {
+    width: 384px;
+    flex-shrink: 0;
+    margin-left: auto;
+  }
   .section-title {
     text-align: left;
   }
