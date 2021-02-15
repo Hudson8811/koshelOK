@@ -302,11 +302,11 @@ section {
     background: 6px center / 332px url(../img/svg-bg-active.svg) no-repeat;
 
     @include mMax {
-      background: 7px center / 321px 10px url(../img/svg-bg-active.svg) no-repeat;
+      background: 6px center / 321px 10px url(../img/svg-bg-active.svg) no-repeat;
     }
 
     @include sMax {
-      background: 7px center / 265px 10px url(../img/svg-bg-active.svg) no-repeat;
+      background: 6px center / 265px 10px url(../img/svg-bg-active.svg) no-repeat;
     }
   }
 

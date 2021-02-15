@@ -99,8 +99,11 @@
     max-width: 670px;
 
     @include mMax {
+      width: calc(100% - 30px);
       padding: 20px;
       margin-top: 40px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .section-title {
