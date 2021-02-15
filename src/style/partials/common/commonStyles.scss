@@ -2,6 +2,10 @@ body {
   font-family: 'SF Pro Display';
   color: #050517;
   background-color: #fff;
+
+  &.hidden {
+    overflow: hidden;
+  }
 }
 
 .wrapper {

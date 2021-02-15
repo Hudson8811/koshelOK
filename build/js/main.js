@@ -18831,6 +18831,7 @@ $(document).ready(function(){
       $('.mobile-menu-wrapper').addClass('is-active');
       $('.mobile-overlay').addClass('is-active');
       $('.mobile-btns').addClass('is-active');
+      $('body').addClass('hidden');
     }
   });
 
@@ -18839,6 +18840,7 @@ $(document).ready(function(){
       $('.mobile-menu-wrapper').removeClass('is-active');
       $('.mobile-overlay').removeClass('is-active');
       $('.mobile-btns').removeClass('is-active');
+      $('body').removeClass('hidden');
   });
 
 

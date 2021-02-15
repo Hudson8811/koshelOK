@@ -22,10 +22,6 @@
     #0055b8;
   margin-bottom: 40px;
 
-  &-small {
-    padding: 40px 0 0;
-  }
-
   &-container {
     position: relative;
   }
@@ -100,7 +96,7 @@
   }
 
   @include tMax {
-    padding-top: 20px;
+    padding-top: 80px;
     margin-bottom: 500px;
 
     .slide_bar {
@@ -116,6 +112,18 @@
 
     .slide_bar {
       display: none;
+    }
+  }
+
+  &-small {
+    padding: 40px 0 0;
+
+    @include tMax {
+      padding-top: 40px;
+    }
+
+    @include mMax {
+      padding-top: 20px;
     }
   }
 }
