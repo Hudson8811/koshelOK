@@ -30,6 +30,43 @@
 
     &:nth-child(4n) {
       margin-right: 0;
+
+      @include tMax {
+        margin-right: 20px;
+      }
+
+      @include mMax {
+        margin: 0;
+        margin-bottom: 20px;
+      }
+    }
+
+    @include tMax {
+      width: calc(33.333% - 40px / 3);
+      margin-right: 20px;
+
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+    }
+
+    @include mMax {
+      width: 100%;
+      margin: 0;
+      margin-bottom: 20px;
+
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+
+      &:nth-child(3n) {
+        margin-right: 0;
+
+        @include mMax {
+          margin: 0;
+          margin-bottom: 20px;
+        }
+      }
     }
   }
 

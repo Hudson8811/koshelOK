@@ -18876,8 +18876,20 @@ $(document).ready(function(){
       };
       setRevNum();
 
+      if($('.clip-bg')){
+        if($(window).width() < 769){
+          $('.clip-bg:nth-child(1)').attr('viewBox', '0 0 335 365')
+        }
+      }
+
       $(window).resize(function(){
         setRevNum();
+
+        if($('.clip-bg')){
+          if($(window).width() < 769){
+            $('.clip-bg:nth-child(1)').attr('viewBox', '0 0 335 365')
+          }
+        }
       })
       $('.reviews-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
         if($(window).width() < 769){
@@ -18934,6 +18946,28 @@ $(document).ready(function(){
         }
       });
       $( "#amount2" ).val( $( "#slider-range2" ).slider( "value" ) + " дней");
+
+      $("#slider-range3").slider({
+        range: "min",
+        min: 1000,
+        max: 15000,
+        value: 4000,
+        slide: function( event, ui ) {
+          $( "#amount3" ).val( ui.value + " грн");
+        }
+      });
+      $( "#amount3" ).val( $( "#slider-range3" ).slider( "value" ) + " грн");
+
+    $("#slider-range4").slider({
+        range: "min",
+        min: 1,
+        max: 30,
+        value: 1,
+        slide: function( event, ui ) {
+          $( "#amount4" ).val( ui.value + " дней");
+        }
+      });
+      $( "#amount4" ).val( $( "#slider-range4" ).slider( "value" ) + " дней");
 
     ymaps.ready(function () {
         var myMap = new ymaps.Map('map', {

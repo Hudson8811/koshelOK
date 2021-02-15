@@ -10,6 +10,8 @@
 }
 
 .f_banner {
+  position: relative;
+  z-index: 2;
   padding: 107px 0 0;
   background: radial-gradient(
       83.44% 320.27% at 0% 100%,
@@ -85,6 +87,7 @@
     @include mMax {
       position: absolute;
       right: 0;
+      top: 10px;
       width: 144px;
       background: transparent;
       border: none;
@@ -97,7 +100,7 @@
   }
 
   @include tMax {
-    padding-top: 61px;
+    padding-top: 20px;
     margin-bottom: 500px;
 
     .slide_bar {
@@ -108,7 +111,7 @@
   }
 
   @include mMax {
-    margin-bottom: 36px;
+    margin-bottom: 0;
     border-radius: 0 0 20px 20px;
 
     .slide_bar {
@@ -224,7 +227,7 @@
     }
 
     @include tMax {
-      max-height: 100%;
+      max-width: 100%;
       margin: 0 auto;
     }
   }
@@ -311,7 +314,7 @@
         left: 15px;
         display: block;
         width: 2px;
-        height: 600px;
+        height: 72%;
         background: #e9ebf5;
       }
     }
@@ -440,6 +443,10 @@
       margin-bottom: 32px;
       border: none;
 
+      &:last-child {
+        margin-bottom: 0;
+      }
+
       &-texts {
         padding-left: 24px;
       }
@@ -505,6 +512,7 @@
       width: 89px;
       height: 89px;
       margin: 0;
+      flex-shrink: 0;
 
       img {
         position: absolute;
@@ -938,5 +946,17 @@
         border-bottom: 0;
       }
     }
+  }
+}
+
+.mobile-bar {
+  display: none;
+
+  @include mMax {
+    display: block;
+    padding-top: 19px;
+    margin-top: -15px;
+    background: #f5f6fb;
+    border-radius: 0 0 20px 20px;
   }
 }

@@ -60,8 +60,26 @@
   }
 }
 
+@mixin tMin {
+  @media (min-width: 1001px) {
+    @content;
+  }
+}
+
 @mixin mMax {
   @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mMin {
+  @media (min-width: 769px) {
+    @content;
+  }
+}
+
+@mixin sMax {
+  @media (max-width: 374px) {
     @content;
   }
 }

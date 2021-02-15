@@ -109,8 +109,16 @@ section {
     line-height: 150%;
     color: #0d1321;
 
+    @include mMax {
+      font-size: 14px;
+    }
+
     & + p {
       margin-top: 20px;
+
+      @include mMax {
+        margin-top: 10px;
+      }
     }
   }
 }
@@ -231,6 +239,14 @@ section {
         z-index: 2;
         display: block;
         transform: translate(-50%, -50%);
+
+        @include mMax {
+          width: 321px;
+        }
+
+        @include sMax {
+          width: 265px;
+        }
       }
 
       .ui-slider-handle {
@@ -265,6 +281,10 @@ section {
   background: #f5f6fb;
   box-shadow: 0px 0px 17px rgba(0, 0, 0, 0.19);
 
+  @include mMax {
+    box-shadow: none;
+  }
+
   &-title {
     display: block;
     margin-bottom: 32px;
@@ -275,7 +295,15 @@ section {
   }
 
   .slide_bar-flexing .ui-slider .ui-slider-range {
-    background: 6px center/332px url(../img/svg-bg-active.svg) no-repeat;
+    background: 6px center / 332px url(../img/svg-bg-active.svg) no-repeat;
+
+    @include mMax {
+      background: 7px center / 321px 10px url(../img/svg-bg-active.svg) no-repeat;
+    }
+
+    @include sMax {
+      background: 7px center / 265px 10px url(../img/svg-bg-active.svg) no-repeat;
+    }
   }
 
   .slide_bar-btns {
@@ -302,6 +330,25 @@ section {
       top: -6px;
       width: 345px;
       height: calc(100% + 12px);
+
+      @include mMax {
+        &:not(.mobile) {
+          width: 335px;
+        }
+      }
+
+      &.mobile {
+        display: none;
+      }
+
+      @include sMax {
+        display: none;
+
+        &.mobile {
+          width: 280px;
+          display: block;
+        }
+      }
     }
   }
   .slide_bar-content-row {

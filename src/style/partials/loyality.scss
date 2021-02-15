@@ -10,6 +10,12 @@
     background: #28c6b3;
     border-radius: 15px;
     padding: 40px 56px 40px 77px;
+
+    @include mMax {
+      display: block;
+      padding: 0;
+      background: transparent;
+    }
   }
 
   &-img {
@@ -17,6 +23,10 @@
     width: 48%;
     max-width: 459px;
     margin-right: auto;
+
+    @include mMax {
+      display: none;
+    }
 
     img {
       position: absolute;
@@ -32,6 +42,11 @@
     width: 48%;
     max-width: 450px;
 
+    @include mMax {
+      width: 100%;
+      max-width: none;
+    }
+
     img {
       display: block;
       width: 100%;
@@ -44,12 +59,23 @@
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
+
+    @include mMax {
+      display: block;
+      width: 100%;
+    }
   }
 
   &-texts {
     width: 61%;
     max-width: 675px;
     margin-right: auto;
+
+    @include mMax {
+      width: calc(100% - 30px);
+      max-width: none;
+      margin: 0 auto;
+    }
 
     h2 {
       display: block;
@@ -58,6 +84,11 @@
       font-size: 32px;
       line-height: 125%;
       color: #0d1321;
+
+      @include mMax {
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
     }
 
     p {
@@ -68,6 +99,11 @@
       line-height: 150%;
       color: #6e737d;
 
+      @include mMax {
+        font-size: 14px;
+        margin-bottom: 20px;
+      }
+
       strong {
         color: #050517;
       }
@@ -77,5 +113,14 @@
   &-bar {
     width: 384px;
     flex-shrink: 0;
+
+    @include mMax {
+      width: 375px;
+      margin: 0 auto;
+    }
+
+    @include sMax {
+      width: 320px;
+    }
   }
 }
