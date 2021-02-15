@@ -299,14 +299,14 @@ section {
   }
 
   .slide_bar-flexing .ui-slider .ui-slider-range {
-    background: 6px center / 332px url(../img/svg-bg-active.svg) no-repeat;
+    background: 7px center / 332px url(../img/svg-bg-active.svg) no-repeat;
 
     @include mMax {
-      background: 6px center / 321px 10px url(../img/svg-bg-active.svg) no-repeat;
+      background: 7px center / 321px 10px url(../img/svg-bg-active.svg) no-repeat;
     }
 
     @include sMax {
-      background: 6px center / 265px 10px url(../img/svg-bg-active.svg) no-repeat;
+      background:7px center / 265px 10px url(../img/svg-bg-active.svg) no-repeat;
     }
   }
 
