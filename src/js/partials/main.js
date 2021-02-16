@@ -16,13 +16,13 @@ $(document).ready(function(){
 
   $('.header-btn').click(function(e){
     e.preventDefault();
-    if($(window).width() < 1001){
+   
       const $this = $(this);
       $('.mobile-menu-wrapper').addClass('is-active');
       $('.mobile-overlay').addClass('is-active');
       $('.mobile-btns').addClass('is-active');
       $('body').addClass('hidden');
-    }
+
   });
 
   $('.mobile-burger').click(function(e){
@@ -58,13 +58,12 @@ $(document).ready(function(){
           const allNum = $('.reviews-slider .slick-slide').length;
           const allNumDesc = Math.ceil(allNum / 3); 
           if($(window).width() < 769){
-            $('.reviews-tools-dots .reviews-all_num').html(allNum);
+            $('.reviews-tools-dots .reviews-all_num').html(allNum < 10 ? '0' + allNum : allNum);
             $('.reviews-tools-dots .reviews-current_num').html('01');
           } else{
-            $('.reviews-tools-dots .reviews-all_num').html(allNumDesc);
+            $('.reviews-tools-dots .reviews-all_num').html(allNumDesc < 10 ? '0' + allNumDesc : allNumDesc);
             $('.reviews-tools-dots .reviews-current_num').html('01');
           }
-          
       };
       setRevNum();
 
